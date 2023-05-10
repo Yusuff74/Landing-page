@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(image/background2.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 1.875rem 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 1.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .0625rem;
+}
+header .navigation a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: .0625rem;
+    padding: .125rem .9375rem;
+    border-radius: 1.25rem;
+    transition: all .3s ease-in-out;
+}
+header .navigation a:not(:last-child){
+    margin-right: 1.874rem;
+}
+header .navigation a:hover{
+    background: #fff;
+}
+.content{
+    max-width: 41rem;
+    margin: 3.75rem 6.25rem;
+}
+.content .info h2{
+    color: #226A80;
+    font-size: 3.44rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .125rem;
+    line-height: 3.75rem;
+    margin-bottom: 1.875rem;
+}
+.content .info h2 span{
+    color: #fff;
+    font-size: 3.125rem;
+    font-weight: 600;
+}
+.content .info p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}
+.content .info-btn{
+    color: #fff;
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .125rem;
+    padding: .625rem 1.25rem;
+    border-radius: .32rem;
+    transition: all .3s ease-in-out;
+}
+.content .info-btn:hover{
+    background: #0C4F60;
+}
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.media-icons a{
+    position: relative;
+    color: #43adc7;
+    font-size: 1.57rem;
+}
+.media-icons a:not(:last-child){
+    margin-right: 3.75rem;
+}
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+label{
+    display: none;
+}
+#check{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+@media (max-width: 60rem){
+    header .navigation{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 1.57rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+    label:hover{
+        color: #fff;
+    }
+    label .close-btn{
+        display: none;
+    }
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114, 223, 255, .9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 3.125rem;
+        letter-spacing: .125rem;
+    }
+    #check:checked ~ header label .menu-btn{
+        display: none;
+    }
+    #check:checked ~ header label .close-btn{
+        display: block;
+        z-index: 2;
+        position: fixed;
+    }
+    label .menu-btn{
+        position: absolute;
+    }
+    header .logo{
+        position: absolute;
+        bottom: -.375rem;
+    }
+    .content .info h2{
+        font-size: 2.82rem;
+        line-height: 3.125rem;
+    }
+    .content .info h2 span{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: .875rem;
+    }
+    @media (max-width: 35rem){
+        .content .info h2{
+            font-size: 2.182rem;
+            line-height: 3.125rem;
+        }
+        .content .info h2 span{
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        .content .info p{
+            font-size: .875rem;
+        }
+    }
+}
